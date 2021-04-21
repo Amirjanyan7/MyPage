@@ -1,0 +1,59 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="webcss.css" type="text/css" />
+    <script type="text/javascript" src="webjs.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3ec854fc03.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function login()
+        {
+            var form = document.getElementById("Signup").style.visibility = "hidden";
+            var h2 = document.getElementsByTagName("h2");
+            h2[0].innerHTML = "Login";
+            form = document.getElementById("Signup").style.visibility = "visible";
+            form.f_name.name = "Login";
+        }
+    </script>
+</head>
+<body>
+    <div class="flex">
+        <a href="Dealer.php"><div class="flexitem1" style="background-color:lightgrey;">Dillers</div></a>
+        <a href="#"> <div class="flexitem2" style="background-color:lightgrey">Sell Car</div></a>
+        <a href="MyPage.html"><i class="fas-fa-user "></i><div class="flexitem3" style="background-color:lightgrey">My Page</div></a>
+        <a href="sign.php"><div class="flexitem5" style="background-color:red">Sign Up</div></a>
+        <a href="web.html"><div class="flexitem6" style="background-color:lightgrey">Home</div></a>
+        <a href="Web_Arm.html"><div class="flexitem7"><img src="Armenia.png" style="width:25px;height:17px;margin-top:5px;" />Arm</div></a>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <img src="top.png" style="height:20px;  width:10px; bottom: 20px; right: 5px;z-index: 99;" />
+    </button>
+    <br /><br /><br />
+    <br /><br /><br />
+
+    <br /><br /><br />
+
+<h2>Registration</h2>
+    <form method="post" action="sign.php" id="Signup" name="signup">
+        ID:<input type="number" name="id" value=$str_1/>
+        <br/>
+        First Name:<input type="text" name="f_name" value=$str_2/>
+        <br/>
+        Last Name:<input type="text" name="l_name" value=$str_3/>
+		<a href="#" onclick="login()">A have already an account</a>
+        <br/>
+        Phone:<input type="number" name="phone" value=$str_4/>
+        <br/>
+        <input type="submit" name="Submit" value="Submit"/>
+
+    </form>
+</body>
+</html>
+_END;
+?>
